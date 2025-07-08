@@ -14,7 +14,7 @@ A collection of production-ready authentication starter kits for Laravel applica
 
 | Kit | Status | Description | Features | Demo |
 |-----|--------|-------------|----------|------|
-| 📱 **[Phone Auth](./phone-auth/)** | ✅ **Available** | Phone/SMS verification | OTP, Multiple SMS gateways, Rate limiting | [Demo](https://phone-auth-demo.com) |
+| 📱 **[Phone Auth](./phone-auth/)** | ✅ **Available** | Phone/SMS verification | OTP, Multiple SMS gateways, Rate limiting | |
 | 📧 **Email Auth** | 🚧 **Coming Soon** | Email-based authentication | Magic links, Email verification, Templates | - |
 | 🔢 **OTP Auth** | 🚧 **Coming Soon** | Multi-channel OTP | SMS + Email, Backup codes, Time-based | - |
 | 🌐 **Social Auth** | 📋 **Planned** | Social media login | Google, GitHub, Facebook, Twitter | - |
