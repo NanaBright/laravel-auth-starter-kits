@@ -18,7 +18,7 @@ Please link any related issues or feature requests here. Use the GitHub syntax: 
 ## Authentication Kit
 Which authentication kit does this PR affect?
 - [ ] Phone Auth
-- [ ] Email Auth (Coming Soon)
+- [ ] Email Auth
 - [ ] OTP Auth (Coming Soon)
 - [ ] Social Auth (Planned)
 - [ ] Two-Factor Auth (Planned)
