@@ -26,11 +26,13 @@ A clear and concise description of what actually happened.
 If applicable, add screenshots to help explain your problem.
 
 ## Environment
-- Laravel Auth Kit: [e.g., Phone Auth]
+- Laravel Auth Kit: [e.g., Phone Auth, Email Auth]
 - Laravel Version: [e.g., 11.0.0]
-- PHP Version: [e.g., 8.1]
+- PHP Version: [e.g., 8.1.33]
+- Node.js Version: [e.g., 18.0.0]
 - Browser: [e.g., Chrome 120.0]
 - OS: [e.g., macOS 14.0]
+- Database: [e.g., MySQL 8.0]
 
 ## Additional Context
 Add any other context about the problem here. Error logs, stack traces, etc.

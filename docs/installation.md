@@ -19,7 +19,7 @@ Before you begin, make sure your system meets the following requirements:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/laravel-auth-starter-kits.git
+git clone https://github.com/NanaBright/laravel-auth-starter-kits.git
 
 # Navigate to the project directory
 cd laravel-auth-starter-kits
