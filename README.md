@@ -6,20 +6,20 @@
 [![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)](https://php.net)
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)](https://vuejs.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tests](https://github.com/yourusername/laravel-auth-starter-kits/workflows/Tests/badge.svg)](https://github.com/yourusername/laravel-auth-starter-kits/actions)
+[![Tests](https://github.com/NanaBright/laravel-auth-starter-kits/workflows/Tests/badge.svg)](https://github.com/NanaBright/laravel-auth-starter-kits/actions)
 
 A collection of production-ready authentication starter kits for Laravel applications. Each kit provides a complete authentication solution with modern UI, robust security, and extensive customization options.
 
 ## 🚀 Available Starter Kits
 
-| Kit | Status | Description | Features | Demo |
-|-----|--------|-------------|----------|------|
-| 📱 **[Phone Auth](./phone-auth/)** | ✅ **Available** | Phone/SMS verification | OTP, Multiple SMS gateways, Rate limiting | |
-| 📧 **Email Auth** | 🚧 **Coming Soon** | Email-based authentication | Magic links, Email verification, Templates | - |
-| 🔢 **OTP Auth** | 🚧 **Coming Soon** | Multi-channel OTP | SMS + Email, Backup codes, Time-based | - |
-| 🌐 **Social Auth** | 📋 **Planned** | Social media login | Google, GitHub, Facebook, Twitter | - |
-| 🔐 **Two-Factor Auth** | 📋 **Planned** | 2FA authentication | TOTP, SMS, Recovery codes | - |
-| 🚫 **Passwordless Auth** | 📋 **Planned** | Passwordless login | Magic links, Biometric, WebAuthn | - |
+| Kit | Status | Description | Features |
+|-----|--------|-------------|----------|
+| 📱 **[Phone Auth](./phone-auth/)** | ✅ **Available** | Phone/SMS verification | OTP, Multiple SMS gateways, Rate limiting |
+| 📧 **[Email Auth](./email-auth/)** | ✅ **Available** | Email-based authentication | Magic links, Email verification, Templates |
+| 🔢 **OTP Auth** | 🚧 **Coming Soon** | Multi-channel OTP | SMS + Email, Backup codes, Time-based |
+| 🌐 **Social Auth** | 📋 **Planned** | Social media login | Google, GitHub, Facebook, Twitter |
+| 🔐 **Two-Factor Auth** | 📋 **Planned** | 2FA authentication | TOTP, SMS, Recovery codes |
+| 🚫 **Passwordless Auth** | 📋 **Planned** | Passwordless login | Magic links, Biometric, WebAuthn |
 
 ## ✨ Why Choose These Starter Kits?
 
@@ -39,7 +39,7 @@ Choose your preferred authentication method and get started in minutes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/laravel-auth-starter-kits.git
+git clone https://github.com/NanaBright/laravel-auth-starter-kits.git
 cd laravel-auth-starter-kits/phone-auth
 
 # Install dependencies
@@ -60,12 +60,30 @@ npm run dev
 
 Visit `http://localhost:8000` and start building!
 
-### 📧 Email Authentication (Coming Soon)
+### 📧 Email Authentication
 
 ```bash
+# Clone the repository
+git clone https://github.com/NanaBright/laravel-auth-starter-kits.git
 cd laravel-auth-starter-kits/email-auth
-# Similar setup process
+
+# Install dependencies
+composer install
+npm install
+
+# Configure environment
+cp .env.example .env
+php artisan key:generate
+
+# Setup database
+php artisan migrate
+
+# Start development servers
+php artisan serve &
+npm run dev
 ```
+
+Visit `http://localhost:8000` and start building!
 
 ## 📋 What's Included
 
@@ -85,6 +103,13 @@ cd laravel-auth-starter-kits/email-auth
 - 📊 **SMS Analytics** - Delivery tracking and metrics
 - 🔄 **Fallback Support** - Multiple delivery methods
 - 💰 **Cost Optimization** - Smart provider routing
+
+### Email Auth Specific
+- 📧 **Magic Link Authentication** - Passwordless email login
+- ✉️ **Email Verification** - Secure email validation
+- 📨 **Email Templates** - Customizable notification templates
+- 🔗 **Secure Token Generation** - Time-limited verification tokens
+- 📮 **Multiple Email Providers** - SMTP, SendGrid, Mailgun, SES
 
 ## 🏗️ Architecture
 
@@ -111,9 +136,9 @@ users (id, created_at, updated_at, ...)
 users (phone, phone_verified_at)
 otp_verifications (phone, otp, expires_at)
 
--- Email auth specific (coming soon)
+-- Email auth specific
 users (email, email_verified_at)
-email_verifications (email, token, expires_at)
+magic_links (email, token, expires_at)
 ```
 
 ## 🔒 Security Features
@@ -136,6 +161,7 @@ email_verifications (email, token, expires_at)
 
 ### Kit-Specific Documentation
 - [Phone Auth Guide](phone-auth/README.md) - Phone/SMS authentication
+- [Email Auth Guide](email-auth/README.md) - Email/Magic link authentication
 - [API Documentation](docs/api.md) - REST API reference
 - [Frontend Guide](docs/frontend.md) - Vue.js customization
 
@@ -171,23 +197,20 @@ See our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Phase 1 (Current)
 - [x] Phone/SMS Authentication Kit
+- [x] Email Authentication Kit
+- [x] Magic link implementation
+- [x] Email template system
 - [x] Comprehensive documentation
 - [x] Multiple SMS gateway support
 - [x] Production deployment guides
 
-### Phase 2 (Q3 2025)
-- [ ] Email Authentication Kit
-- [ ] Magic link implementation
-- [ ] Email template system
-- [ ] SMTP configuration wizard
-
-### Phase 3 (Q4 2025)
+### Phase 2 (Q4 2025)
 - [ ] Multi-channel OTP Kit
 - [ ] Social Authentication Kit
 - [ ] Two-Factor Authentication Kit
 - [ ] Admin dashboard for user management
 
-### Phase 4 (2026)
+### Phase 3 (2026)
 - [ ] Passwordless Authentication Kit
 - [ ] Biometric Authentication Kit
 - [ ] Enterprise features
@@ -207,8 +230,8 @@ Thanks to all contributors who make this project possible! 🙏
 
 ### Get Help
 - 📖 **Documentation** - Check our comprehensive guides
-- 💬 **Discussions** - [GitHub Discussions](https://github.com/yourusername/laravel-auth-starter-kits/discussions)
-- 🐛 **Issues** - [Report bugs or request features](https://github.com/yourusername/laravel-auth-starter-kits/issues)
+- 💬 **Discussions** - [GitHub Discussions](https://github.com/NanaBright/laravel-auth-starter-kits/discussions)
+- 🐛 **Issues** - [Report bugs or request features](https://github.com/NanaBright/laravel-auth-starter-kits/issues)
 - 🔒 **Security** - See our [Security Policy](SECURITY.md)
 
 ## 📄 License
@@ -224,10 +247,10 @@ This project is open-sourced software licensed under the [MIT license](LICENSE).
 
 ## 📊 Stats
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/laravel-auth-starter-kits)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/laravel-auth-starter-kits)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/laravel-auth-starter-kits)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/laravel-auth-starter-kits)
+![GitHub stars](https://img.shields.io/github/stars/NanaBright/laravel-auth-starter-kits)
+![GitHub forks](https://img.shields.io/github/forks/NanaBright/laravel-auth-starter-kits)
+![GitHub issues](https://img.shields.io/github/issues/NanaBright/laravel-auth-starter-kits)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/NanaBright/laravel-auth-starter-kits)
 
 ---
 
@@ -235,4 +258,4 @@ This project is open-sourced software licensed under the [MIT license](LICENSE).
 
 If you find this project helpful, please consider giving it a ⭐ on GitHub!
 
-[⭐ Star this project](https://github.com/yourusername/laravel-auth-starter-kits) | [🐛 Report Bug](https://github.com/yourusername/laravel-auth-starter-kits/issues) | [✨ Request Feature](https://github.com/yourusername/laravel-auth-starter-kits/issues)
+[⭐ Star this project](https://github.com/NanaBright/laravel-auth-starter-kits) | [🐛 Report Bug](https://github.com/NanaBright/laravel-auth-starter-kits/issues) | [✨ Request Feature](https://github.com/NanaBright/laravel-auth-starter-kits/issues)

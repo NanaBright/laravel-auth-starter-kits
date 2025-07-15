@@ -406,9 +406,11 @@ Get SMS delivery statistics (admin only).
 
 A Postman collection is available for testing the API endpoints:
 
-1. Download the [Postman Collection](https://example.com/postman/laravel-auth-starter-kits.json)
-2. Import into Postman
-3. Set up your environment variables
+1. Create a new collection in Postman
+2. Import the API endpoints from this documentation
+3. Set up your environment variables:
+   - `base_url`: Your API base URL (e.g., `http://localhost:8000/api`)
+   - `token`: Your authentication token
 4. Run the requests
 
 ### Testing with cURL

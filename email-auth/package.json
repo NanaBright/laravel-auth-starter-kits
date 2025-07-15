@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "laravel-email-auth-starter-kit",
+    "version": "1.0.0",
+    "description": "Laravel Email Authentication Starter Kit with Vue.js and Tailwind CSS",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "preview": "vite preview",
+        "lint": "eslint resources/js --ext .js,.vue",
+        "lint:fix": "eslint resources/js --ext .js,.vue --fix",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.0.0",
+        "@vitejs/plugin-vue": "^5.2.4",
+        "autoprefixer": "^10.4.21",
+        "axios": "^1.8.2",
+        "concurrently": "^9.0.1",
+        "eslint": "^8.0.0",
+        "eslint-plugin-vue": "^9.0.0",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^4.1.7",
+        "vite": "^6.2.4",
+        "vitest": "^1.0.0"
+    },
+    "dependencies": {
+        "lucide-vue-next": "^0.511.0",
+        "pinia": "^2.1.7",
+        "vue": "^3.5.15",
+        "vue-router": "^4.5.1",
+        "vue-i18n": "^9.8.0"
+    },
+    "keywords": [
+        "laravel",
+        "authentication",
+        "email",
+        "magic-link",
+        "vue",
+        "tailwind",
+        "starter-kit"
+    ],
+    "author": "Laravel Auth Starter Kits",
+    "license": "MIT"
+}
