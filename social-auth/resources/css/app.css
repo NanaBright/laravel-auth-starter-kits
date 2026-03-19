@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-social {
+    @apply flex items-center justify-center gap-3 w-full px-6 py-3 text-base font-medium rounded-lg border transition-colors duration-200;
+  }
+  
+  .btn-google {
+    @apply btn-social bg-white text-gray-700 border-gray-300 hover:bg-gray-50;
+  }
+  
+  .btn-github {
+    @apply btn-social bg-gray-900 text-white border-gray-900 hover:bg-gray-800;
+  }
+  
+  .btn-facebook {
+    @apply btn-social bg-blue-600 text-white border-blue-600 hover:bg-blue-700;
+  }
+  
+  .btn-twitter {
+    @apply btn-social bg-black text-white border-black hover:bg-gray-900;
+  }
+}

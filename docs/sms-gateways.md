@@ -2,7 +2,7 @@
 
 This guide explains how to configure and use different SMS gateways with the Laravel Auth Starter Kits, specifically for phone authentication.
 
-## 📋 Supported SMS Gateways
+## Supported SMS Gateways
 
 The Phone Auth kit supports the following SMS gateways out-of-the-box:
 
@@ -11,7 +11,7 @@ The Phone Auth kit supports the following SMS gateways out-of-the-box:
 3. **AWS SNS** - Amazon Simple Notification Service with scalable pricing
 4. **Custom** - Integrate your own SMS provider or API
 
-## ⚙️ Gateway Configuration
+## Gateway Configuration
 
 ### Vonage (formerly Nexmo)
 
@@ -91,7 +91,7 @@ $smsService = app(App\Services\SmsServiceInterface::class);
 $success = $smsService->send('+12125550123', 'Your verification code is: 123456');
 ```
 
-## 🛠️ Creating a Custom SMS Gateway
+## Creating a Custom SMS Gateway
 
 You can integrate any SMS provider by creating a custom service that implements the `SmsServiceInterface`.
 
@@ -163,7 +163,7 @@ CUSTOM_SMS_API_KEY=your_api_key
 CUSTOM_SMS_BASE_URL=https://api.yoursmsgateway.com
 ```
 
-## 🔄 Fallback SMS Providers
+## Fallback SMS Providers
 
 The Phone Auth kit supports automatic fallbacks between multiple SMS providers in case of delivery failures.
 
@@ -186,7 +186,7 @@ Enable and configure fallbacks in `config/sms.php`:
 3. This continues until successful delivery or all providers are exhausted
 4. Failures are logged for monitoring and analytics
 
-## 📊 Delivery Analytics
+## Delivery Analytics
 
 The Phone Auth kit includes analytics for tracking SMS delivery performance across providers.
 
@@ -227,7 +227,7 @@ Configure in `config/sms.php`:
 ],
 ```
 
-## 📱 Testing SMS Gateways
+## Testing SMS Gateways
 
 ### Test Environment
 
@@ -276,7 +276,7 @@ php artisan sms:test --to="+12125550123" --message="Test message"
 php artisan sms:test-otp --to="+12125550123"
 ```
 
-## 🌍 International Phone Support
+## International Phone Support
 
 The Phone Auth kit supports international phone numbers with proper formatting and validation.
 
@@ -304,7 +304,7 @@ To restrict allowed regions:
 ],
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -368,7 +368,7 @@ SMS delivery logs are stored in:
 - Database: `sms_logs` table (if enabled)
 - Log files: `storage/logs/sms-*.log`
 
-## 🚀 Best Practices
+## Best Practices
 
 ### Security
 
@@ -390,7 +390,7 @@ SMS delivery logs are stored in:
 - Set up alerts for unusual spending
 - Consider using OTP apps instead of SMS where possible
 
-## 📝 Provider Comparison
+## Provider Comparison
 
 | Provider | Pros | Cons | Best For |
 |----------|------|------|----------|
@@ -399,7 +399,7 @@ SMS delivery logs are stored in:
 | AWS SNS | Cost-effective, scales well | Complex setup | High-volume, cost-sensitive |
 | Custom | Complete control | Development overhead | Specific regional needs |
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - **Scheduled SMS** - Send SMS at specified times
 - **Templates** - Reusable message templates

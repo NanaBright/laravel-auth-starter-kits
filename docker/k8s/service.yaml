@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-auth-service
+  namespace: laravel-auth
+  labels:
+    app: laravel-auth
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: laravel-auth
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  namespace: laravel-auth
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3306
+      targetPort: 3306
+  selector:
+    app: mysql
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+  namespace: laravel-auth
+spec:
+  type: ClusterIP
+  ports:
+    - port: 6379
+      targetPort: 6379
+  selector:
+    app: redis

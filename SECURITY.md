@@ -1,14 +1,14 @@
 # Security Policy
 
-🔒 **Security is our top priority.** We take all security vulnerabilities seriously and appreciate your help in keeping Laravel Auth Starter Kits secure.
+**Security is our top priority.** We take all security vulnerabilities seriously and appreciate your help in keeping Laravel Auth Starter Kits secure.
 
-## 🚨 Reporting Security Vulnerabilities
+## Reporting Security Vulnerabilities
 
 **Please DO NOT report security vulnerabilities through public GitHub issues.**
 
 Instead, please report them responsibly by:
 
-### 📧 Email Reporting
+### Email Reporting
 Send an email to: **security@laravel-auth-starter-kits.com**
 
 Include the following information:
@@ -20,7 +20,7 @@ Include the following information:
 - Proof-of-concept or exploit code (if possible)
 - Impact of the issue, including how an attacker might exploit it
 
-### 🔐 Encrypted Reporting
+### Encrypted Reporting
 For sensitive security issues, you can encrypt your report using our PGP key:
 
 ```
@@ -29,7 +29,7 @@ For sensitive security issues, you can encrypt your report using our PGP key:
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-## ⚡ Response Timeline
+## Response Timeline
 
 We will acknowledge your email within **24 hours** and provide a detailed response within **72 hours** indicating:
 - Confirmation of the issue
@@ -37,7 +37,7 @@ We will acknowledge your email within **24 hours** and provide a detailed respon
 - Any workarounds available
 - Credit preferences
 
-## 🎯 Scope
+## Scope
 
 ### In Scope
 - Authentication bypass vulnerabilities
@@ -63,7 +63,7 @@ We will acknowledge your email within **24 hours** and provide a detailed respon
 - Missing security headers (unless they lead to exploitation)
 - Missing rate limiting on non-sensitive endpoints
 
-## 🏆 Recognition
+## Recognition
 
 ### Security Hall of Fame
 We maintain a security hall of fame to recognize researchers who help keep our project secure:
@@ -77,7 +77,7 @@ While we don't currently offer a formal bug bounty program, we do provide:
 - Potential swag and stickers
 - Reference letters for security researchers
 
-## 🔒 Security Best Practices
+## Security Best Practices
 
 ### For Users
 - Always use HTTPS in production
@@ -98,7 +98,7 @@ While we don't currently offer a formal bug bounty program, we do provide:
 - Implement proper session management
 - Use secure random number generation
 
-## 🛡️ Security Features
+## Security Features
 
 ### Built-in Security
 - **Rate Limiting** - Prevents brute force attacks
@@ -116,7 +116,7 @@ While we don't currently offer a formal bug bounty program, we do provide:
 - **Provider Rotation** - Fallback SMS providers
 - **Audit Logging** - Security event logging
 
-## 📋 Security Checklist
+## Security Checklist
 
 ### Before Deployment
 - [ ] Environment variables are properly configured
@@ -136,7 +136,7 @@ While we don't currently offer a formal bug bounty program, we do provide:
 - [ ] Audit user permissions
 - [ ] Test backup and recovery procedures
 
-## 🔍 Security Testing
+## Security Testing
 
 ### Automated Testing
 We use several tools to maintain security:
@@ -154,7 +154,7 @@ Regular manual security testing includes:
 - Error handling testing
 - Rate limiting testing
 
-## 📚 Security Resources
+## Security Resources
 
 ### Documentation
 - [Laravel Security Documentation](https://laravel.com/docs/security)
@@ -165,7 +165,7 @@ Regular manual security testing includes:
 - [Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [Laravel Security Course](https://laracasts.com/series/laravel-security)
 
-## 🔄 Security Updates
+## Security Updates
 
 ### Communication
 Security updates are communicated through:
@@ -180,7 +180,7 @@ Security updates are communicated through:
 3. **Within 1 week** - Medium severity issues
 4. **Next release** - Low severity issues
 
-## 📞 Contact Information
+## Contact Information
 
 ### Security Team
 - **Email**: security@laravel-auth-starter-kits.com
@@ -192,7 +192,7 @@ Security updates are communicated through:
 - **Discussions**: For general questions
 - **Email**: contact@laravel-auth-starter-kits.com
 
-## 📄 Legal
+## Legal
 
 ### Responsible Disclosure
 We follow responsible disclosure practices:
@@ -215,6 +215,6 @@ As long as you:
 
 ---
 
-**Thank you for helping keep Laravel Auth Starter Kits secure!** 🔒
+**Thank you for helping keep Laravel Auth Starter Kits secure!**
 
-[🏠 Back to README](README.md) | [🤝 Contributing](CONTRIBUTING.md) | [🐛 Report Bug](https://github.com/yourusername/laravel-auth-starter-kits/issues)
+[Back to README](README.md) | [Contributing](CONTRIBUTING.md) | [Report Bug](https://github.com/yourusername/laravel-auth-starter-kits/issues)

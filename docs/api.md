@@ -2,7 +2,7 @@
 
 This documentation covers the RESTful API endpoints available in the Laravel Auth Starter Kits. Each authentication kit provides its own set of API endpoints for authentication flows, user management, and related functionality.
 
-## 📱 Phone Authentication API
+## Phone Authentication API
 
 ### Base URL
 
@@ -359,7 +359,7 @@ Format varies by provider. Example for Vonage:
 }
 ```
 
-## 📊 API Statistics and Analytics
+## API Statistics and Analytics
 
 ```
 GET /admin/stats/sms
@@ -400,7 +400,7 @@ Get SMS delivery statistics (admin only).
 }
 ```
 
-## 📋 API Testing Guide
+## API Testing Guide
 
 ### Postman Collection
 
@@ -446,7 +446,7 @@ For development and testing, you can use these test phone numbers:
 
 Configure test numbers in `config/sms.php` under `test_numbers`.
 
-## 🧪 API Testing in CI/CD
+## API Testing in CI/CD
 
 ### PHPUnit Tests
 
@@ -486,7 +486,7 @@ jobs:
         run: php artisan test --filter=Api
 ```
 
-## 📝 API Versioning
+## API Versioning
 
 The API uses versioning to ensure backwards compatibility.
 
@@ -518,7 +518,7 @@ Future versions will be accessible via:
 - Deprecated endpoints will return a warning header
 - Deprecated endpoints will eventually return a 410 Gone status
 
-## 🔒 API Security
+## API Security
 
 ### Rate Limiting
 
@@ -547,7 +547,7 @@ API endpoints support Cross-Origin Resource Sharing (CORS) for specified domains
 
 API tokens automatically expire after 7 days by default. This can be configured in `config/sanctum.php`.
 
-## 🚀 Next Steps
+## Next Steps
 
 - Check out the [Frontend Guide](frontend.md) for integrating with the API
 - Read the [Security Guide](security.md) for API security best practices

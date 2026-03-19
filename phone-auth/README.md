@@ -1,4 +1,4 @@
-# 📱 Custom SMS Authentication System
+# Custom SMS Authentication System
 
 A Laravel-based phone number authentication system with custom SMS sending capabilities, built without dependency on third-party services like Twilio. This system provides multiple SMS delivery methods and is designed to be flexible, secure, and production-ready.
 
@@ -7,17 +7,17 @@ A Laravel-based phone number authentication system with custom SMS sending capab
 ![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## ✨ Features
+## Features
 
-- 🔐 **Phone Number Authentication** - Secure OTP-based registration and login
-- 📞 **Multiple SMS Methods** - HTTP API, SMPP, Email-to-SMS, and logging
-- 🛡️ **Security First** - Rate limiting, OTP expiration, and secure token management
-- 🔧 **Developer Friendly** - Comprehensive logging and development tools
-- 🌐 **Production Ready** - Configurable for various SMS gateways
-- 📱 **Modern Frontend** - Vue.js SPA with Tailwind CSS
-- 🎯 **Zero Dependencies** - No Twilio, Nexmo, or other SMS service requirements
+- **Phone Number Authentication** - Secure OTP-based registration and login
+- **Multiple SMS Methods** - HTTP API, SMPP, Email-to-SMS, and logging
+- **Security First** - Rate limiting, OTP expiration, and secure token management
+- **Developer Friendly** - Comprehensive logging and development tools
+- **Production Ready** - Configurable for various SMS gateways
+- **Modern Frontend** - Vue.js SPA with Tailwind CSS
+- **Zero Dependencies** - No Twilio, Nexmo, or other SMS service requirements
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -77,7 +77,7 @@ A Laravel-based phone number authentication system with custom SMS sending capab
    http://localhost:8000
    ```
 
-## 📋 SMS Methods
+## SMS Methods
 
 ### 1. Logger (Development)
 Perfect for development and testing. OTP codes are logged to Laravel logs.
@@ -119,7 +119,7 @@ SMPP_USERNAME=your_username
 SMPP_PASSWORD=your_password
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Basic SMS Configuration
 
@@ -149,7 +149,7 @@ SMS_SENDER_ID=YourApp
 
 See [`docs/configuration.md`](docs/configuration.md) for detailed configuration options.
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication Routes
 
@@ -186,7 +186,7 @@ const verifyResponse = await fetch('/api/auth/verify-otp', {
 });
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### Backend (Laravel)
 - **AuthController** - Handles authentication logic
@@ -212,7 +212,7 @@ otp_verifications (id, phone, otp, expires_at, created_at, updated_at)
 personal_access_tokens (...)
 ```
 
-## 🛡️ Security Features
+## Security Features
 
 - **Rate Limiting** - Prevents spam and abuse
 - **OTP Expiration** - Time-limited verification codes
@@ -221,7 +221,7 @@ personal_access_tokens (...)
 - **CORS Protection** - Configured for security
 - **Input Sanitization** - All inputs are validated and sanitized
 
-## 🧪 Testing
+## Testing
 
 ### Running Tests
 ```bash
@@ -241,7 +241,7 @@ php artisan test --coverage
 3. Check `storage/logs/laravel.log` for OTP
 4. Complete verification process
 
-## 📚 Documentation
+## Documentation
 
 - [Installation Guide](docs/installation.md)
 - [Configuration Reference](docs/configuration.md)
@@ -250,7 +250,7 @@ php artisan test --coverage
 - [Contributing Guide](CONTRIBUTING.md)
 - [Security Policy](SECURITY.md)
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
@@ -269,24 +269,24 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 - Test coverage expansion
 - Performance optimizations
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Laravel framework for the robust backend foundation
 - Vue.js for the reactive frontend experience
 - Tailwind CSS for the beautiful styling system
 - Laravel Sanctum for secure API authentication
 
-## 📞 Support
+## Support
 
 - **Documentation**: Check our [docs](docs/) folder
 - **Issues**: [GitHub Issues](https://github.com/yourusername/custom-sms-auth/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/custom-sms-auth/discussions)
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] SMS gateway marketplace integration
 - [ ] Multi-language support
@@ -297,6 +297,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ by the community**
+**Made by the community**
 
-If you find this project helpful, please consider giving it a ⭐ on GitHub!
+If you find this project helpful, please consider giving it a star on GitHub!
