@@ -2,7 +2,7 @@
 
 This guide covers all configuration options for Laravel Auth Starter Kits, allowing you to customize each authentication kit to fit your specific needs.
 
-## 📋 Basic Configuration
+## Basic Configuration
 
 ### Environment Variables
 
@@ -39,7 +39,7 @@ All authentication kits use the following configuration files:
 - `config/sms.php` - SMS provider settings (Phone Auth)
 - `config/services.php` - Third-party service credentials
 
-## 📱 Phone Authentication Configuration
+## Phone Authentication Configuration
 
 ### SMS Provider Selection
 
@@ -125,7 +125,7 @@ Customize SMS message templates:
 ],
 ```
 
-## 🔧 Advanced Configuration
+## Advanced Configuration
 
 ### Custom SMS Service Provider
 
@@ -217,7 +217,7 @@ Customize session behavior in `config/session.php`:
 'secure' => env('SESSION_SECURE_COOKIE', false), // HTTPS only
 ```
 
-## 🛠️ Environment-Specific Configuration
+## Environment-Specific Configuration
 
 ### Development
 
@@ -255,7 +255,7 @@ SESSION_SECURE_COOKIE=true
 SESSION_DOMAIN=yourdomain.com
 ```
 
-## 📊 Logging and Monitoring
+## Logging and Monitoring
 
 ### SMS Logging
 
@@ -284,7 +284,7 @@ Configure analytics:
 ],
 ```
 
-## 🔒 Security Configuration
+## Security Configuration
 
 ### CORS Configuration
 
@@ -336,7 +336,7 @@ Configure Sanctum in `config/sanctum.php`:
 'expiration' => 60 * 24 * 7, // Token expiration in minutes (7 days)
 ```
 
-## 🎨 Frontend Configuration
+## Frontend Configuration
 
 ### Tailwind Configuration
 
@@ -390,7 +390,7 @@ export default defineConfig({
 });
 ```
 
-## 🧩 Module Configuration
+## Module Configuration
 
 ### Feature Flags
 
@@ -419,7 +419,7 @@ Configure localization:
 ],
 ```
 
-## 🚀 Next Steps
+## Next Steps
 
 - Explore the [API Documentation](api.md)
 - Check out the [Frontend Guide](frontend.md)

@@ -6,15 +6,15 @@ Brief description of changes made in this PR.
 
 ## Type of Change
 
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] 📚 Documentation update
-- [ ] 🎨 Code style/formatting changes
-- [ ] ♻️ Code refactoring (no functional changes)
-- [ ] ⚡ Performance improvements
-- [ ] 🧪 Test improvements
-- [ ] 🔧 Build/configuration changes
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+- [ ] Code style/formatting changes
+- [ ] Code refactoring (no functional changes)
+- [ ] Performance improvements
+- [ ] Test improvements
+- [ ] Build/configuration changes
 
 ## Related Issues
 

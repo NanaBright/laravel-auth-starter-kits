@@ -2,7 +2,7 @@
 
 This guide will walk you through the process of installing and setting up Laravel Auth Starter Kits on your system.
 
-## 📋 Requirements
+## Requirements
 
 Before you begin, make sure your system meets the following requirements:
 
@@ -13,7 +13,7 @@ Before you begin, make sure your system meets the following requirements:
 - MySQL, PostgreSQL, or SQLite
 - Laravel CLI (optional but recommended)
 
-## 🚀 Quick Installation
+## Quick Installation
 
 ### 1. Clone the Repository
 
@@ -135,7 +135,7 @@ Open your browser and visit:
 http://localhost:8000
 ```
 
-## 🔍 Detailed Installation
+## Detailed Installation
 
 ### Database Setup Options
 
@@ -224,7 +224,7 @@ Customize the SMS message in `config/sms.php`:
 ],
 ```
 
-## 🐳 Docker Installation
+## Docker Installation
 
 ### Using Docker Compose
 
@@ -254,7 +254,7 @@ docker build -t laravel-auth-starter .
 docker run -p 8000:80 laravel-auth-starter
 ```
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -295,7 +295,7 @@ If you encounter any issues:
 2. Join the [Discord Community](https://discord.gg/your-discord)
 3. Ask on [Stack Overflow](https://stackoverflow.com/questions/tagged/laravel-auth-starter-kits)
 
-## 🔄 Updating
+## Updating
 
 ### Standard Update
 
@@ -315,7 +315,7 @@ php artisan migrate
 
 For major version updates, check the upgrade guide in the release notes.
 
-## 🎯 Next Steps
+## Next Steps
 
 - Read the [Configuration Guide](configuration.md) to customize your auth kit
 - Explore the [API Documentation](api.md) to understand available endpoints

@@ -2,7 +2,7 @@
 
 This guide covers the frontend architecture, components, and customization options for the Laravel Auth Starter Kits.
 
-## 📋 Frontend Architecture
+## Frontend Architecture
 
 ### Technology Stack
 
@@ -52,7 +52,7 @@ resources/
     └── welcome.blade.php # Welcome page
 ```
 
-## 🎨 UI Components
+## UI Components
 
 ### Core Components
 
@@ -145,7 +145,7 @@ The UI kit includes the following core components:
    <AuthSuccess :user="user" />
    ```
 
-## 🔧 Customizing the UI
+## Customizing the UI
 
 ### Theme Customization
 
@@ -386,7 +386,7 @@ const logout = async () => {
 </script>
 ```
 
-## 🔄 State Management
+## State Management
 
 ### Pinia Store Setup
 
@@ -533,7 +533,7 @@ const sendOtp = async () => {
 </script>
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 ### Mobile-First Approach
 
@@ -568,7 +568,7 @@ module.exports = {
 }
 ```
 
-## 🌐 Internationalization
+## Internationalization
 
 ### Setting Up Vue I18n
 
@@ -676,7 +676,7 @@ watch(locale, (newLocale) => {
 </script>
 ```
 
-## 🧪 Testing UI Components
+## Testing UI Components
 
 ### Vue Test Utils Setup
 
@@ -741,7 +741,7 @@ Run tests:
 npm test
 ```
 
-## 📱 Progressive Web App (PWA)
+## Progressive Web App (PWA)
 
 ### Setting Up PWA
 
@@ -807,7 +807,7 @@ export default defineConfig({
 
 3. Create the PWA icons in the `public` directory.
 
-## 📊 Analytics Integration
+## Analytics Integration
 
 ### Event Tracking
 
@@ -843,7 +843,7 @@ const sendOtp = async () => {
 </script>
 ```
 
-## 🚀 Performance Optimization
+## Performance Optimization
 
 ### Code Splitting
 
@@ -917,7 +917,7 @@ export default defineConfig({
 })
 ```
 
-## 🚀 Next Steps
+## Next Steps
 
 - Check out the [API Documentation](api.md) for integrating with the frontend
 - Learn about [SMS Gateway Integration](sms-gateways.md) for phone authentication

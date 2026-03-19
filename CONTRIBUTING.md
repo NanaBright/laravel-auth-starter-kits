@@ -1,42 +1,42 @@
 # Contributing to Laravel Auth Starter Kits
 
-🎉 **Thank you for your interest in contributing!** 🎉
+**Thank you for your interest in contributing!**
 
 We welcome contributions from everyone, whether you're fixing bugs, adding features, improving documentation, or creating new authentication kits. This guide will help you get started.
 
-## 🌟 Ways to Contribute
+## Ways to Contribute
 
-### 🐛 Bug Reports
+### Bug Reports
 - Use the [Bug Report Template](.github/ISSUE_TEMPLATE/bug_report.md)
 - Include steps to reproduce the issue
 - Provide your environment details (PHP version, Laravel version, etc.)
 - Include error messages and logs if applicable
 
-### ✨ Feature Requests
+### Feature Requests
 - Use the [Feature Request Template](.github/ISSUE_TEMPLATE/feature_request.md)
 - Explain the problem your feature would solve
 - Describe your proposed solution
 - Consider the scope and impact on existing functionality
 
-### 📱 New Authentication Kits
+### New Authentication Kits
 - Follow the existing kit structure (see `phone-auth/` as reference)
 - Include comprehensive documentation
 - Add tests for all functionality
 - Ensure security best practices are followed
 
-### 📚 Documentation
+### Documentation
 - Fix typos and improve clarity
 - Add examples and use cases
 - Create tutorials and guides
 - Translate documentation to other languages
 
-### 🧪 Testing
+### Testing
 - Write unit tests for new features
 - Add integration tests
 - Improve test coverage
 - Test on different environments
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Fork and Clone
 ```bash
@@ -99,7 +99,7 @@ git push origin feature/your-feature-name
 
 Then create a Pull Request on GitHub using our [PR Template](.github/PULL_REQUEST_TEMPLATE.md).
 
-## 📋 Development Guidelines
+## Development Guidelines
 
 ### Code Style
 - Follow PSR-12 coding standards for PHP
@@ -127,7 +127,7 @@ Then create a Pull Request on GitHub using our [PR Template](.github/PULL_REQUES
 - Implement proper rate limiting
 - Report security issues privately (see SECURITY.md)
 
-## 🏗️ Creating New Authentication Kits
+## Creating New Authentication Kits
 
 ### Structure Template
 ```
@@ -174,7 +174,7 @@ new-auth-kit/
 - [ ] Documentation completed
 - [ ] Security review conducted
 
-## 🔍 Code Review Process
+## Code Review Process
 
 ### What We Look For
 - **Functionality** - Does it work as expected?
@@ -190,7 +190,7 @@ new-auth-kit/
 - **Large features** - Within 2 weeks
 - **New kits** - Within 3-4 weeks
 
-## 🎯 Priority Areas
+## Priority Areas
 
 ### High Priority
 - Bug fixes for existing kits
@@ -210,7 +210,7 @@ new-auth-kit/
 - Advanced features
 - Third-party integrations
 
-## 🤝 Community Guidelines
+## Community Guidelines
 
 ### Be Respectful
 - Treat everyone with respect and kindness
@@ -230,7 +230,7 @@ new-auth-kit/
 - Admit mistakes and learn from them
 - Maintain a positive and supportive environment
 
-## 🏆 Recognition
+## Recognition
 
 ### Contributors
 We recognize contributors in several ways:
@@ -242,26 +242,26 @@ We recognize contributors in several ways:
 ### Hall of Fame
 Outstanding contributors may be invited to join our maintainer team with additional responsibilities and recognition.
 
-## 📞 Getting Help
+## Getting Help
 
 ### Questions
-- 💬 **GitHub Discussions** - General questions and discussions
-- 📖 **Documentation** - Check existing documentation first
-- 🐛 **Issues** - Technical problems and bugs
+- **GitHub Discussions** - General questions and discussions
+- **Documentation** - Check existing documentation first
+- **Issues** - Technical problems and bugs
 
 ### Support Channels
 - **GitHub Issues** - Bug reports and feature requests
 - **Discussions** - General questions and community chat
 - **Email** - For sensitive security issues only
 
-## 📝 License
+## License
 
 By contributing to this project, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
-**Thank you for contributing!** 🎉
+**Thank you for contributing!**
 
 Every contribution, no matter how small, helps make this project better for everyone. We appreciate your time and effort in improving Laravel Auth Starter Kits.
 
-[🏠 Back to README](README.md) | [🐛 Report Bug](https://github.com/yourusername/laravel-auth-starter-kits/issues) | [✨ Request Feature](https://github.com/yourusername/laravel-auth-starter-kits/issues)
+[Back to README](README.md) | [Report Bug](https://github.com/yourusername/laravel-auth-starter-kits/issues) | [Request Feature](https://github.com/yourusername/laravel-auth-starter-kits/issues)

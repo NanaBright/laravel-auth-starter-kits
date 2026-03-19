@@ -1,6 +1,6 @@
 # Email Authentication Kit
 
-🔐 **Secure email-based authentication for Laravel applications**
+**Secure email-based authentication for Laravel applications**
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.x-red.svg)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)](https://php.net)
@@ -9,19 +9,19 @@
 
 A production-ready email authentication starter kit for Laravel applications. This kit provides secure email-based authentication with magic links, email verification, and customizable email templates.
 
-## ✨ Features
+## Features
 
-- 🔐 **Magic Link Authentication** - Passwordless login via email
-- 📧 **Email Verification** - Secure email address verification
-- 📨 **Custom Email Templates** - Beautiful, responsive email templates
-- 🛡️ **Security First** - Rate limiting, token expiration, and protection
-- 🎨 **Modern UI** - Vue.js 3 + Tailwind CSS interface
-- 📱 **Responsive Design** - Works perfectly on all devices
-- 🔄 **Fallback Support** - Multiple email providers support
-- 📊 **Analytics** - Track email delivery and engagement
-- 🌐 **Multi-language** - i18n support for global applications
+- **Magic Link Authentication** - Passwordless login via email
+- **Email Verification** - Secure email address verification
+- **Custom Email Templates** - Beautiful, responsive email templates
+- **Security First** - Rate limiting, token expiration, and protection
+- **Modern UI** - Vue.js 3 + Tailwind CSS interface
+- **Responsive Design** - Works perfectly on all devices
+- **Fallback Support** - Multiple email providers support
+- **Analytics** - Track email delivery and engagement
+- **Multi-language** - i18n support for global applications
 
-## 📋 Requirements
+## Requirements
 
 - PHP >= 8.1
 - Composer
@@ -30,7 +30,7 @@ A production-ready email authentication starter kit for Laravel applications. Th
 - MySQL, PostgreSQL, or SQLite
 - SMTP email service (Gmail, SendGrid, Mailgun, etc.)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -106,7 +106,7 @@ Open your browser and visit:
 http://localhost:8000
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Magic Link Settings
 
@@ -141,7 +141,7 @@ Configure rate limiting in `config/mail.php`:
 ],
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Frontend Components
 
@@ -170,7 +170,7 @@ Edit Blade templates in `resources/views/emails/` to match your brand:
 - Add your logo and branding
 - Modify email content and messaging
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Authentication
 
@@ -185,7 +185,7 @@ Edit Blade templates in `resources/views/emails/` to match your brand:
 - `PUT /api/user` - Update user profile
 - `DELETE /api/user` - Delete user account
 
-## 🔒 Security Features
+## Security Features
 
 - **Rate Limiting** - Prevents spam and abuse
 - **Token Expiration** - Magic links expire after configured time
@@ -194,14 +194,14 @@ Edit Blade templates in `resources/views/emails/` to match your brand:
 - **Input Validation** - Comprehensive input validation
 - **Audit Logging** - Track authentication events
 
-## 📊 Analytics & Monitoring
+## Analytics & Monitoring
 
 - **Email Delivery Tracking** - Monitor email delivery success
 - **Engagement Metrics** - Track link clicks and usage
 - **Failed Attempts** - Log and monitor failed authentication
 - **Performance Metrics** - Response times and success rates
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -216,7 +216,7 @@ php artisan test --testsuite=Feature
 php artisan test --coverage
 ```
 
-## 📚 Documentation
+## Documentation
 
 - [Installation Guide](docs/installation.md)
 - [Configuration Reference](docs/configuration.md)
@@ -224,22 +224,22 @@ php artisan test --coverage
 - [Security Guide](docs/security.md)
 - [Email Templates](docs/email-templates.md)
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](../CONTRIBUTING.md) for details.
 
-## 📄 License
+## License
 
 This project is open-sourced software licensed under the [MIT license](../LICENSE).
 
-## 📞 Support
+## Support
 
-- 📖 [Documentation](../docs/)
-- 🐛 [Issue Tracker](https://github.com/NanaBright/laravel-auth-starter-kits/issues)
-- 💬 [Discussions](https://github.com/NanaBright/laravel-auth-starter-kits/discussions)
+- [Documentation](../docs/)
+- [Issue Tracker](https://github.com/NanaBright/laravel-auth-starter-kits/issues)
+- [Discussions](https://github.com/NanaBright/laravel-auth-starter-kits/discussions)
 
 ---
 
 **Ready to get started?** Follow the [Installation Guide](docs/installation.md) to set up email authentication in your Laravel application.
 
-[⬅️ Back to Main README](../README.md) | [📱 Phone Auth](../phone-auth/README.md)
+[Back to Main README](../README.md) | [Phone Auth](../phone-auth/README.md)

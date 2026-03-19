@@ -2,7 +2,7 @@
 
 This comprehensive security guide covers best practices for securing Laravel Auth Starter Kits in production environments.
 
-## 📋 Security Overview
+## Security Overview
 
 Laravel Auth Starter Kits are built with security as a top priority. The following security features are included by default:
 
@@ -15,7 +15,7 @@ Laravel Auth Starter Kits are built with security as a top priority. The followi
 7. **Secure Headers** - HTTP security headers
 8. **Session Security** - Secure session handling
 
-## 🔒 Authentication Security
+## Authentication Security
 
 ### OTP Authentication Security (Phone Auth)
 
@@ -66,7 +66,7 @@ In `config/sms.php`:
 - **Activity Logging** - Log all recovery attempts
 - **Notification** - Alert user of account recovery attempts
 
-## 🔄 Rate Limiting
+## Rate Limiting
 
 ### Implementation
 
@@ -142,7 +142,7 @@ public function getOtpAttemptLimit($phone)
 }
 ```
 
-## 🛡️ Input Validation
+## Input Validation
 
 ### Form Request Validation
 
@@ -223,7 +223,7 @@ class SanitizeInput
 }
 ```
 
-## 🔐 CSRF Protection
+## CSRF Protection
 
 ### Web Routes
 
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-## 🛡️ XSS Protection
+## XSS Protection
 
 ### Output Escaping
 
@@ -310,7 +310,7 @@ For Vue.js components, use the `v-text` directive or mustache interpolation:
 </template>
 ```
 
-## 🔒 SQL Injection Prevention
+## SQL Injection Prevention
 
 ### Eloquent ORM
 
@@ -342,7 +342,7 @@ DB::table('users')
 DB::raw("SELECT * FROM users WHERE phone = '{$request->phone}'");
 ```
 
-## 🔒 Session Security
+## Session Security
 
 ### Session Configuration
 
@@ -382,7 +382,7 @@ return [
 ];
 ```
 
-## 🔐 Password Storage
+## Password Storage
 
 Even though Phone Auth doesn't use passwords directly, secure password hashing is implemented for future authentication methods:
 
@@ -400,7 +400,7 @@ if (Hash::check($password, $user->password)) {
 }
 ```
 
-## 📱 Phone Number Security
+## Phone Number Security
 
 ### Phone Number Verification
 
@@ -445,7 +445,7 @@ public function formatPhoneNumber($phone)
 }
 ```
 
-## 📝 Audit Logging
+## Audit Logging
 
 ### Security Event Logging
 
@@ -503,7 +503,7 @@ public function verifyOtp(VerifyOtpRequest $request)
 }
 ```
 
-## 🔒 API Security
+## API Security
 
 ### API Authentication
 
@@ -537,7 +537,7 @@ Configure token expiration in `config/sanctum.php`:
 'expiration' => env('SANCTUM_TOKEN_EXPIRATION', 60 * 24 * 7), // 7 days
 ```
 
-## 🔒 HTTP Security Headers
+## HTTP Security Headers
 
 ### Security Headers Middleware
 
@@ -575,7 +575,7 @@ protected $middleware = [
 ];
 ```
 
-## 🔐 Environment Security
+## Environment Security
 
 ### Environment File
 
@@ -617,7 +617,7 @@ DB_USERNAME=prod_user_with_limited_privileges
 DB_PASSWORD=strong_random_password
 ```
 
-## 🔎 Vulnerability Scanning
+## Vulnerability Scanning
 
 ### Automated Security Scanning
 
@@ -665,7 +665,7 @@ Regular manual security reviews:
 3. Security testing of authentication flows
 4. Penetration testing
 
-## 🚨 Incident Response
+## Incident Response
 
 ### Security Breach Response Plan
 
@@ -696,7 +696,7 @@ public function notifyOfSecurityEvent($users, $eventType, $details)
 }
 ```
 
-## 🧪 Security Testing
+## Security Testing
 
 ### Unit Tests for Security Features
 
@@ -750,7 +750,7 @@ public function test_otp_sending_is_rate_limited()
 }
 ```
 
-## 🔄 Regular Updates
+## Regular Updates
 
 ### Dependency Updates
 
@@ -788,7 +788,7 @@ composer update
 npm update
 ```
 
-## 📊 Security Monitoring
+## Security Monitoring
 
 ### Real-time Security Monitoring
 
@@ -838,7 +838,7 @@ public function detectAnomalies($user, $request)
 }
 ```
 
-## 🔧 Security Configuration Checklist
+## Security Configuration Checklist
 
 ### Pre-launch Security Checklist
 
@@ -904,7 +904,7 @@ class SecurityCheck extends Command
 }
 ```
 
-## 📚 Additional Resources
+## Additional Resources
 
 ### Security Documentation
 
@@ -919,7 +919,7 @@ class SecurityCheck extends Command
 - [OWASP ZAP](https://www.zaproxy.org/)
 - [Snyk](https://snyk.io/)
 
-## 🚀 Next Steps
+## Next Steps
 
 - Learn about [Deployment Options](deployment.md) with security best practices
 - Check out [API Documentation](api.md) for secure API usage

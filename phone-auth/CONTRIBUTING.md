@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the Custom SMS Authentication System! This document provides guidelines and information for contributors.
 
-## 🤝 How to Contribute
+## How to Contribute
 
 ### Getting Started
 
@@ -22,15 +22,15 @@ Thank you for your interest in contributing to the Custom SMS Authentication Sys
 
 We welcome various types of contributions:
 
-- 🐛 **Bug fixes**
-- ✨ **New features**
-- 📚 **Documentation improvements**
-- 🧪 **Test coverage**
-- 🔧 **Performance improvements**
-- 🎨 **UI/UX enhancements**
-- 🌐 **Translations**
+- **Bug fixes**
+- **New features**
+- **Documentation improvements**
+- **Test coverage**
+- **Performance improvements**
+- **UI/UX enhancements**
+- **Translations**
 
-## 📋 Development Guidelines
+## Development Guidelines
 
 ### Code Style
 
@@ -108,7 +108,7 @@ fix(sms): resolve SMPP connection timeout
 docs(readme): update installation instructions
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Running Tests
 ```bash
@@ -146,7 +146,7 @@ class NewFeatureTest extends TestCase
 }
 ```
 
-## 📝 Documentation
+## Documentation
 
 ### Documentation Standards
 
@@ -163,7 +163,7 @@ When making changes, consider updating:
 - Inline code comments
 - API documentation
 
-## 🔍 Pull Request Process
+## Pull Request Process
 
 ### Before Submitting
 
@@ -204,7 +204,7 @@ Brief description of changes
 Fixes #123
 ```
 
-## 🐛 Bug Reports
+## Bug Reports
 
 ### Before Reporting
 
@@ -236,7 +236,7 @@ If applicable
 - Browser: [e.g. Chrome 100]
 ```
 
-## 💡 Feature Requests
+## Feature Requests
 
 ### Feature Request Template
 
@@ -254,7 +254,7 @@ Other solutions considered
 Any other context or screenshots
 ```
 
-## 🏷️ Areas for Contribution
+## Areas for Contribution
 
 ### High Priority
 - [ ] Additional SMS gateway integrations
@@ -274,7 +274,7 @@ Any other context or screenshots
 - [ ] Developer tools
 - [ ] Analytics features
 
-## 📚 SMS Gateway Integrations
+## SMS Gateway Integrations
 
 ### Adding New Gateways
 
@@ -306,7 +306,7 @@ To add a new SMS gateway:
 - Clickatell
 - Bulk SMS providers
 
-## 🎯 Code Review Guidelines
+## Code Review Guidelines
 
 ### For Reviewers
 
@@ -324,7 +324,7 @@ To add a new SMS gateway:
 - [ ] Documentation updated
 - [ ] Tests adequate and passing
 
-## 🏆 Recognition
+## Recognition
 
 Contributors will be:
 - Listed in `CONTRIBUTORS.md`
@@ -332,13 +332,13 @@ Contributors will be:
 - Added to GitHub contributors
 - Credited in documentation
 
-## 📞 Getting Help
+## Getting Help
 
 - **Issues**: [GitHub Issues](https://github.com/yourusername/custom-sms-auth/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/custom-sms-auth/discussions)
 - **Documentation**: Check `docs/` folder
 
-## 📜 Code of Conduct
+## Code of Conduct
 
 ### Our Pledge
 
@@ -359,7 +359,7 @@ We pledge to make participation in our project a harassment-free experience for 
 - Publishing others' private information
 - Other conduct inappropriate in a professional setting
 
-## 🙏 Thank You!
+## Thank You!
 
 Your contributions make this project better for everyone. We appreciate your time and effort in helping improve the Custom SMS Authentication System!
 

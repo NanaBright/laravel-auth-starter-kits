@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-queue
+  namespace: laravel-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel-queue
+  template:
+    metadata:
+      labels:
+        app: laravel-queue
+    spec:
+      containers:
+        - name: queue
+          image: your-registry/laravel-auth:latest
+          command:
+            - php
+            - artisan
+            - queue:work
+            - --sleep=3
+            - --tries=3
+            - --max-time=3600
+          envFrom:
+            - configMapRef:
+                name: laravel-auth-config
+            - secretRef:
+                name: laravel-auth-secrets
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            exec:
+              command:
+                - php
+                - -v
+            initialDelaySeconds: 30
+            periodSeconds: 30

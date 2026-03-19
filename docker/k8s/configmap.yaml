@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: laravel-auth-config
+  namespace: laravel-auth
+data:
+  APP_ENV: "production"
+  APP_DEBUG: "false"
+  APP_URL: "https://your-domain.com"
+  LOG_CHANNEL: "stderr"
+  LOG_LEVEL: "error"
+  DB_CONNECTION: "mysql"
+  DB_HOST: "mysql-service"
+  DB_PORT: "3306"
+  DB_DATABASE: "laravel"
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+  CACHE_DRIVER: "redis"
+  SESSION_DRIVER: "redis"
+  QUEUE_CONNECTION: "redis"
+  BROADCAST_DRIVER: "log"
+  FILESYSTEM_DISK: "local"

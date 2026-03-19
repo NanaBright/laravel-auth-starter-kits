@@ -1,0 +1,49 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: laravel-migrate
+  namespace: laravel-auth
+spec:
+  template:
+    spec:
+      containers:
+        - name: migrate
+          image: your-registry/laravel-auth:latest
+          command:
+            - php
+            - artisan
+            - migrate
+            - --force
+          envFrom:
+            - configMapRef:
+                name: laravel-auth-config
+            - secretRef:
+                name: laravel-auth-secrets
+      restartPolicy: OnFailure
+  backoffLimit: 3
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: laravel-scheduler
+  namespace: laravel-auth
+spec:
+  schedule: "* * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: scheduler
+              image: your-registry/laravel-auth:latest
+              command:
+                - php
+                - artisan
+                - schedule:run
+              envFrom:
+                - configMapRef:
+                    name: laravel-auth-config
+                - secretRef:
+                    name: laravel-auth-secrets
+          restartPolicy: OnFailure

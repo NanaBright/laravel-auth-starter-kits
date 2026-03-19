@@ -1,0 +1,28 @@
+{
+    "name": "laravel-auth-starter-kits-tests",
+    "version": "1.0.0",
+    "description": "Frontend test suite for Laravel Auth Starter Kits",
+    "type": "module",
+    "scripts": {
+        "test": "vitest",
+        "test:run": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "test:ui": "vitest --ui",
+        "test:watch": "vitest --watch"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.4.0",
+        "@testing-library/vue": "^8.0.0",
+        "@vitejs/plugin-vue": "^5.0.0",
+        "@vitest/coverage-v8": "^1.3.0",
+        "@vitest/ui": "^1.3.0",
+        "@vue/test-utils": "^2.4.0",
+        "happy-dom": "^13.0.0",
+        "pinia": "^2.1.0",
+        "vite": "^5.0.0",
+        "vitest": "^1.3.0",
+        "vue": "^3.4.0",
+        "vue-i18n": "^9.9.0",
+        "vue-router": "^4.2.0"
+    }
+}

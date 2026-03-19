@@ -2,7 +2,7 @@
 
 This guide provides comprehensive instructions for deploying Laravel Auth Starter Kits to various production environments.
 
-## 📋 Pre-Deployment Checklist
+## Pre-Deployment Checklist
 
 Before deploying to production, ensure you have completed these critical steps:
 
@@ -25,7 +25,7 @@ Before deploying to production, ensure you have completed these critical steps:
 - [ ] Configure database for production use
 - [ ] Set up proper database indexing
 
-## 🖥️ Standard Server Deployment
+## Standard Server Deployment
 
 ### System Requirements
 
@@ -230,7 +230,7 @@ sudo certbot --apache -d your-domain.com -d www.your-domain.com  # For Apache
 sudo systemctl status certbot.timer  # Verify auto-renewal is active
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Using Docker Compose
 
@@ -489,7 +489,7 @@ docker-compose exec app php artisan route:cache
 docker-compose exec app php artisan view:cache
 ```
 
-## ☁️ Cloud Deployments
+## Cloud Deployments
 
 ### AWS Deployment
 
@@ -634,7 +634,7 @@ docker-compose exec app php artisan view:cache
    heroku run php artisan migrate --force
    ```
 
-## 🔄 Continuous Integration/Deployment
+## Continuous Integration/Deployment
 
 ### GitHub Actions CI/CD Pipeline
 
@@ -720,7 +720,7 @@ jobs:
         EOF
 ```
 
-## 📊 Monitoring and Maintenance
+## Monitoring and Maintenance
 
 ### Server Monitoring
 
@@ -909,7 +909,7 @@ chmod +x /usr/local/bin/update_laravel_auth.sh
 (crontab -l 2>/dev/null; echo "0 3 * * 0 /usr/local/bin/update_laravel_auth.sh") | crontab -
 ```
 
-## 🚀 Scaling Your Application
+## Scaling Your Application
 
 ### Horizontal Scaling
 
@@ -955,7 +955,7 @@ chmod +x /usr/local/bin/update_laravel_auth.sh
 2. Implement caching for expensive queries
 3. Use proper indexing for frequently accessed columns
 
-## 🔄 Rollback Strategy
+## Rollback Strategy
 
 If a deployment causes issues, have a rollback plan:
 
@@ -1004,7 +1004,7 @@ Usage:
 /usr/local/bin/rollback.sh v1.2.3
 ```
 
-## 🚀 Next Steps
+## Next Steps
 
 - Explore [API Documentation](api.md) for integrating with your application
 - Check out [SMS Gateway Integration](sms-gateways.md) for phone authentication

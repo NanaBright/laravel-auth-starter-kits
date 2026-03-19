@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-auth
+  namespace: laravel-auth
+  labels:
+    app: laravel-auth
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: laravel-auth
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: laravel-auth
+    spec:
+      containers:
+        - name: app
+          image: your-registry/laravel-auth:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
+          envFrom:
+            - configMapRef:
+                name: laravel-auth-config
+            - secretRef:
+                name: laravel-auth-secrets
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            exec:
+              command:
+                - php
+                - -v
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            exec:
+              command:
+                - php
+                - artisan
+                - --version
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          volumeMounts:
+            - name: storage
+              mountPath: /var/www/html/storage/app
+        
+        - name: nginx
+          image: nginx:alpine
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "25m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+      
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: laravel-storage-pvc
+        - name: nginx-config
+          configMap:
+            name: nginx-config
+      
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - laravel-auth
+                topologyKey: kubernetes.io/hostname
