@@ -1,53 +1,58 @@
 # Admin Dashboard
 
-A Laravel 11 admin dashboard for managing users across all auth starter kits.
+User management dashboard for Laravel authentication systems.
 
 ## Features
 
-- User management (CRUD operations)
+- User CRUD operations
 - User statistics and analytics
 - Activity logs
 - Role-based access control
 - Search and filtering
 - Bulk actions
-- Export to CSV
-- Vue.js 3 frontend with Tailwind CSS
-- Chart.js for visualizations
+- CSV export
+- Vue.js frontend with Tailwind CSS
 
 ## Requirements
 
 - PHP 8.1+
 - Composer
 - Node.js 18+
-- SQLite/MySQL/PostgreSQL
+- MySQL, PostgreSQL, or SQLite
 
 ## Installation
-
-1. Clone and install dependencies:
 
 ```bash
 cd admin-dashboard
 composer install
 npm install
-```
 
-2. Configure environment:
-
-```bash
 cp .env.example .env
 php artisan key:generate
-```
-
-3. Run migrations and seed admin user:
-
-```bash
 php artisan migrate
 php artisan db:seed
+
+php artisan serve &
+npm run dev
 ```
 
-4. Start the development server:
+Default admin credentials are created by the seeder. Check `database/seeders/AdminSeeder.php`.
 
-```bash
+## Routes
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /admin/users | List users |
+| GET | /admin/users/{id} | User details |
+| PUT | /admin/users/{id} | Update user |
+| DELETE | /admin/users/{id} | Delete user |
+| GET | /admin/stats | Dashboard statistics |
+| GET | /admin/activity | Activity logs |
+| GET | /admin/export | Export users to CSV |
+
+## License
+
+MIT
 php artisan serve
 npm run dev
 ```

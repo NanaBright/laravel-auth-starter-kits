@@ -1,75 +1,43 @@
 # Email Authentication Kit
 
-**Secure email-based authentication for Laravel applications**
-
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-red.svg)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)](https://php.net)
-[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)](https://vuejs.org)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
-
-A production-ready email authentication starter kit for Laravel applications. This kit provides secure email-based authentication with magic links, email verification, and customizable email templates.
+Email-based authentication with magic links and email verification for Laravel.
 
 ## Features
 
-- **Magic Link Authentication** - Passwordless login via email
-- **Email Verification** - Secure email address verification
-- **Custom Email Templates** - Beautiful, responsive email templates
-- **Security First** - Rate limiting, token expiration, and protection
-- **Modern UI** - Vue.js 3 + Tailwind CSS interface
-- **Responsive Design** - Works perfectly on all devices
-- **Fallback Support** - Multiple email providers support
-- **Analytics** - Track email delivery and engagement
-- **Multi-language** - i18n support for global applications
+- Magic link (passwordless) login
+- Email verification flow
+- Customizable email templates
+- Rate limiting and token expiration
+- Vue.js frontend with Tailwind CSS
 
 ## Requirements
 
-- PHP >= 8.1
+- PHP 8.1+
 - Composer
-- Node.js >= 16.x
-- Laravel 11.x
+- Node.js 18+
 - MySQL, PostgreSQL, or SQLite
-- SMTP email service (Gmail, SendGrid, Mailgun, etc.)
+- SMTP service (Gmail, SendGrid, Mailgun, etc.)
 
-## Quick Start
-
-### 1. Install Dependencies
+## Installation
 
 ```bash
-# Install PHP dependencies
+cd email-auth
 composer install
-
-# Install Node.js dependencies
 npm install
-```
 
-### 2. Configure Environment
-
-```bash
-# Copy environment file
 cp .env.example .env
-
-# Generate application key
 php artisan key:generate
-
-# Configure your database and email settings in .env
-```
-
-### 3. Set Up Database
-
-```bash
-# Run migrations
 php artisan migrate
 
-# (Optional) Seed sample data
-php artisan db:seed
+php artisan serve &
+npm run dev
 ```
 
-### 4. Configure Email Service
+## Email Configuration
 
-Update your `.env` file with your email service credentials:
+Update `.env` with your mail settings:
 
 ```env
-# Gmail SMTP
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
@@ -77,40 +45,12 @@ MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=noreply@yourapp.com
-MAIL_FROM_NAME="Your App Name"
-
-# Or use SendGrid
-MAIL_MAILER=sendgrid
-SENDGRID_API_KEY=your-sendgrid-api-key
-
-# Or use Mailgun
-MAIL_MAILER=mailgun
-MAILGUN_DOMAIN=your-domain.com
-MAILGUN_SECRET=your-mailgun-secret
-```
-
-### 5. Start Development Servers
-
-```bash
-# Start Laravel server
-php artisan serve
-
-# In another terminal, start Vite development server
-npm run dev
-```
-
-### 6. Visit Your Application
-
-Open your browser and visit:
-```
-http://localhost:8000
+MAIL_FROM_NAME="Your App"
 ```
 
 ## Configuration
 
-### Magic Link Settings
-
-Configure magic link behavior in `config/auth.php`:
+Magic link settings in `config/auth.php`:
 
 ```php
 'magic_links' => [

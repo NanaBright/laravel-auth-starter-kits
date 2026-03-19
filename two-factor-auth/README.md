@@ -1,53 +1,60 @@
-# Two-Factor Authentication Starter Kit
+# Two-Factor Authentication Kit
 
-A Laravel 11 starter kit that provides robust two-factor authentication using TOTP (Time-based One-Time Passwords) and SMS verification.
+TOTP and SMS-based 2FA for Laravel applications.
 
 ## Features
 
-- Email/password authentication with 2FA layer
-- TOTP support (Google Authenticator, Authy, etc.)
-- SMS-based 2FA as an alternative
-- Recovery codes for account access
-- QR code generation for easy authenticator setup
+- TOTP support (Google Authenticator, Authy)
+- SMS-based 2FA
+- Recovery codes
+- QR code generation for authenticator apps
 - Remember trusted devices
-- Session management
-- Vue.js 3 frontend with Tailwind CSS
+- Vue.js frontend with Tailwind CSS
 
 ## Requirements
 
 - PHP 8.1+
 - Composer
 - Node.js 18+
-- SQLite/MySQL/PostgreSQL
+- MySQL, PostgreSQL, or SQLite
 
 ## Installation
-
-1. Clone and install dependencies:
 
 ```bash
 cd two-factor-auth
 composer install
 npm install
-```
 
-2. Configure environment:
-
-```bash
 cp .env.example .env
 php artisan key:generate
-```
-
-3. Run migrations:
-
-```bash
 php artisan migrate
+
+php artisan serve &
+npm run dev
 ```
 
-4. Start the development server:
+## Usage
 
-```bash
-php artisan serve
-npm run dev
+After logging in with email/password:
+
+1. Enable 2FA in account settings
+2. Scan QR code with authenticator app (or choose SMS)
+3. Enter verification code to confirm setup
+4. Save recovery codes securely
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/2fa/enable | Enable 2FA |
+| POST | /api/2fa/verify | Verify 2FA code |
+| POST | /api/2fa/disable | Disable 2FA |
+| GET | /api/2fa/recovery-codes | Get recovery codes |
+| POST | /api/2fa/regenerate-codes | Regenerate recovery codes |
+
+## License
+
+MIT
 ```
 
 ## Configuration
