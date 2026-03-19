@@ -1,53 +1,75 @@
-# Social Authentication Starter Kit
+# Social Authentication Kit
 
-A Laravel 11 starter kit that provides authentication via social providers using Laravel Socialite.
+OAuth authentication for Laravel using Laravel Socialite.
 
 ## Features
 
-- OAuth authentication with multiple providers:
-  - Google
-  - GitHub
-  - Facebook
-  - Twitter (X)
-- Account linking (connect multiple social accounts)
+- OAuth login with Google, GitHub, Facebook, Twitter
+- Account linking (multiple social accounts per user)
 - Automatic user creation on first login
 - Profile synchronization
-- API token authentication with Sanctum
-- Vue.js 3 frontend with Tailwind CSS
-- Dark mode support
+- Vue.js frontend with Tailwind CSS
 
 ## Requirements
 
 - PHP 8.1+
 - Composer
 - Node.js 18+
-- SQLite/MySQL/PostgreSQL
+- MySQL, PostgreSQL, or SQLite
 
 ## Installation
-
-1. Clone and install dependencies:
 
 ```bash
 cd social-auth
 composer install
 npm install
-```
 
-2. Configure environment:
-
-```bash
 cp .env.example .env
 php artisan key:generate
+php artisan migrate
+
+php artisan serve &
+npm run dev
 ```
 
-3. Set up OAuth credentials in `.env`:
+## OAuth Configuration
+
+Add your OAuth credentials to `.env`:
 
 ```env
 # Google
-GOOGLE_CLIENT_ID=your-client-id
-GOOGLE_CLIENT_SECRET=your-client-secret
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
 
 # GitHub
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+GITHUB_REDIRECT_URI=http://localhost:8000/auth/github/callback
+
+# Facebook
+FACEBOOK_CLIENT_ID=
+FACEBOOK_CLIENT_SECRET=
+FACEBOOK_REDIRECT_URI=http://localhost:8000/auth/facebook/callback
+
+# Twitter
+TWITTER_CLIENT_ID=
+TWITTER_CLIENT_SECRET=
+TWITTER_REDIRECT_URI=http://localhost:8000/auth/twitter/callback
+```
+
+## Routes
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /auth/{provider}/redirect | Redirect to OAuth provider |
+| GET | /auth/{provider}/callback | OAuth callback |
+| POST | /auth/link/{provider} | Link social account |
+| DELETE | /auth/unlink/{provider} | Unlink social account |
+
+## License
+
+MIT
 GITHUB_CLIENT_ID=your-client-id
 GITHUB_CLIENT_SECRET=your-client-secret
 

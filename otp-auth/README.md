@@ -1,53 +1,60 @@
 # OTP Authentication Kit
 
-Multi-channel OTP authentication for Laravel applications with SMS, Email, and backup code support.
-
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-red.svg)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)](https://php.net)
-[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)](https://vuejs.org)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
-
-A production-ready multi-channel OTP authentication starter kit for Laravel applications. This kit provides flexible OTP delivery via SMS, Email, or both, with backup codes for account recovery.
+Multi-channel OTP authentication for Laravel with SMS, Email, and backup code support.
 
 ## Features
 
-- **Multi-Channel OTP** - Send verification codes via SMS, Email, or both
-- **Backup Codes** - Generate and manage recovery backup codes
-- **Time-Based OTP** - Support for TOTP (Time-based One-Time Password)
-- **Flexible Delivery** - Choose primary and fallback delivery channels
-- **Rate Limiting** - Built-in protection against abuse
-- **Modern UI** - Vue.js 3 + Tailwind CSS interface
-- **API Ready** - RESTful API with Laravel Sanctum
+- OTP delivery via SMS, Email, or both
+- Backup codes for account recovery
+- TOTP (Time-based One-Time Password) support
+- Rate limiting and expiration
+- Vue.js frontend with Tailwind CSS
 
 ## Requirements
 
-- PHP >= 8.1
+- PHP 8.1+
 - Composer
-- Node.js >= 16.x
-- Laravel 11.x
+- Node.js 18+
 - MySQL, PostgreSQL, or SQLite
-- SMS provider (Vonage, Twilio, etc.) for SMS delivery
-- SMTP service for Email delivery
+- SMS provider and/or SMTP service
 
-## Quick Start
-
-### 1. Install Dependencies
+## Installation
 
 ```bash
-# Install PHP dependencies
+cd otp-auth
 composer install
-
-# Install Node.js dependencies
 npm install
+
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+
+php artisan serve &
+npm run dev
 ```
 
-### 2. Configure Environment
+## Configuration
 
-```bash
-# Copy environment file
-cp .env.example .env
+Set your preferred OTP channel in `.env`:
 
-# Generate application key
+```env
+OTP_CHANNEL=sms       # sms, email, or both
+OTP_LENGTH=6
+OTP_EXPIRY=10         # minutes
+```
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/auth/request-otp | Request OTP |
+| POST | /api/auth/verify-otp | Verify OTP |
+| POST | /api/auth/backup-codes | Generate backup codes |
+| POST | /api/auth/verify-backup | Verify backup code |
+
+## License
+
+MIT
 php artisan key:generate
 ```
 

@@ -1,15 +1,6 @@
 # Internationalization (i18n)
 
-Multi-language support for Laravel Auth Starter Kits.
-
-## Features
-
-- 10 supported languages out of the box
-- Backend Laravel translation files
-- Frontend Vue.js i18n integration
-- Automatic language detection
-- Language switcher component
-- RTL support for Arabic
+Multi-language support module for Laravel Auth Starter Kits.
 
 ## Supported Languages
 
@@ -21,32 +12,52 @@ Multi-language support for Laravel Auth Starter Kits.
 | de | German | LTR |
 | pt | Portuguese | LTR |
 | it | Italian | LTR |
-| zh | Chinese (Simplified) | LTR |
+| zh | Chinese | LTR |
 | ja | Japanese | LTR |
 | ko | Korean | LTR |
 | ar | Arabic | RTL |
 
 ## Backend Setup (Laravel)
 
-### Configuration
+Add to `config/app.php`:
 
 ```php
-// config/app.php
 'locale' => env('APP_LOCALE', 'en'),
-'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+'fallback_locale' => 'en',
 'available_locales' => ['en', 'es', 'fr', 'de', 'pt', 'it', 'zh', 'ja', 'ko', 'ar'],
 ```
 
-### Middleware
+Copy language files from `lang/` to your project's `lang/` directory.
 
-```php
-// Add to bootstrap/app.php
-->withMiddleware(function (Middleware $middleware) {
-    $middleware->web(append: [
-        \App\Http\Middleware\SetLocale::class,
-    ]);
-})
+Add the locale middleware from `middleware/SetLocale.php`.
+
+## Frontend Setup (Vue.js)
+
+Install vue-i18n:
+
+```bash
+npm install vue-i18n
 ```
+
+Copy the frontend translations from `frontend/` to your project.
+
+See `frontend/README.md` for Vue.js integration details.
+
+## Usage
+
+Backend:
+```php
+__('auth.login')
+```
+
+Frontend:
+```vue
+{{ $t('auth.login') }}
+```
+
+## License
+
+MIT
 
 ### Usage in Controllers
 

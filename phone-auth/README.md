@@ -1,81 +1,36 @@
-# Custom SMS Authentication System
+# Phone Authentication Kit
 
-A Laravel-based phone number authentication system with custom SMS sending capabilities, built without dependency on third-party services like Twilio. This system provides multiple SMS delivery methods and is designed to be flexible, secure, and production-ready.
-
-![Laravel](https://img.shields.io/badge/Laravel-11.x-red.svg)
-![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)
-![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+Phone number authentication with OTP verification for Laravel. Supports multiple SMS gateways without requiring specific third-party SDKs.
 
 ## Features
 
-- **Phone Number Authentication** - Secure OTP-based registration and login
-- **Multiple SMS Methods** - HTTP API, SMPP, Email-to-SMS, and logging
-- **Security First** - Rate limiting, OTP expiration, and secure token management
-- **Developer Friendly** - Comprehensive logging and development tools
-- **Production Ready** - Configurable for various SMS gateways
-- **Modern Frontend** - Vue.js SPA with Tailwind CSS
-- **Zero Dependencies** - No Twilio, Nexmo, or other SMS service requirements
+- OTP-based registration and login
+- Multiple SMS delivery methods (HTTP API, SMPP, Email-to-SMS, logging)
+- Rate limiting and OTP expiration
+- Vue.js frontend with Tailwind CSS
+- Laravel Sanctum for API tokens
 
-## Quick Start
+## Requirements
 
-### Prerequisites
-
-- PHP 8.1 or higher
+- PHP 8.1+
 - Composer
-- Node.js & npm
-- MySQL/PostgreSQL database
+- Node.js 18+
+- MySQL, PostgreSQL, or SQLite
 
-### Installation
+## Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/custom-sms-auth.git
-   cd custom-sms-auth
-   ```
+```bash
+cd phone-auth
+composer install
+npm install
 
-2. **Install dependencies**
-   ```bash
-   composer install
-   npm install
-   ```
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
 
-3. **Environment setup**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-
-4. **Configure database**
-   ```env
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=phone_auth
-   DB_USERNAME=root
-   DB_PASSWORD=
-   ```
-
-5. **Run migrations**
-   ```bash
-   php artisan migrate
-   ```
-
-6. **Configure SMS settings** (see [Configuration](#configuration))
-
-7. **Start development servers**
-   ```bash
-   # Terminal 1 - Laravel backend
-   php artisan serve
-   
-   # Terminal 2 - Frontend assets
-   npm run dev
-   ```
-
-8. **Visit your application**
-   ```
-   http://localhost:8000
-   ```
+php artisan serve &
+npm run dev
+```
 
 ## SMS Methods
 
@@ -223,80 +178,20 @@ personal_access_tokens (...)
 
 ## Testing
 
-### Running Tests
 ```bash
-# Run all tests
 php artisan test
-
-# Run specific test suite
-php artisan test --testsuite=Feature
-
-# With coverage
-php artisan test --coverage
 ```
 
-### Manual Testing
-1. Set `SMS_METHOD=logger` in `.env`
-2. Register with a phone number
-3. Check `storage/logs/laravel.log` for OTP
-4. Complete verification process
+For development, set `SMS_METHOD=logger` and check `storage/logs/laravel.log` for OTP codes.
 
 ## Documentation
 
-- [Installation Guide](docs/installation.md)
-- [Configuration Reference](docs/configuration.md)
-- [SMS Gateway Setup](docs/sms-gateways.md)
-- [API Documentation](docs/api.md)
-- [Contributing Guide](CONTRIBUTING.md)
-- [Security Policy](SECURITY.md)
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Quick Contribution Steps
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Areas for Contribution
-- Additional SMS gateway integrations
-- Enhanced security features
-- UI/UX improvements
-- Documentation improvements
-- Test coverage expansion
-- Performance optimizations
+- [Configuration](docs/configuration.md)
+- [SMS Gateways](docs/sms-gateways.md)
+- [API Reference](docs/api.md)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Laravel framework for the robust backend foundation
-- Vue.js for the reactive frontend experience
-- Tailwind CSS for the beautiful styling system
-- Laravel Sanctum for secure API authentication
-
-## Support
-
-- **Documentation**: Check our [docs](docs/) folder
-- **Issues**: [GitHub Issues](https://github.com/yourusername/custom-sms-auth/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/custom-sms-auth/discussions)
-
-## Roadmap
-
-- [ ] SMS gateway marketplace integration
-- [ ] Multi-language support
-- [ ] Enhanced analytics dashboard
-- [ ] Webhook support for SMS delivery status
-- [ ] Docker containerization
-- [ ] Kubernetes deployment guides
-
----
-
-**Made by the community**
+MIT
 
 If you find this project helpful, please consider giving it a star on GitHub!
